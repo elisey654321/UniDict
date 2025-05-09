@@ -1,25 +1,41 @@
-# Зависимости
+# Frontend (React)
 /node_modules
 /.pnp
 .pnp.js
-
-# Сборка
 /build
-/dist
-/.cache
-
-# Логи и настройки
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.eslintcache
-.prettierignore
-
-# Переменные окружения
+/.env
 .env.local
-.env.development
-.env.test
-.env.production
+.eslintcache
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+.installed.cfg
+*.egg
+dist/
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.python-version
 
 # IDE
 .idea/
@@ -29,7 +45,4 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
-
-# Дополнительно
-.DS_Store
-*.log
+*.DS_Store
