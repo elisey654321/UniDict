@@ -1,23 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import ItemList from './components/ItemList';
-import AddItem from './components/AddItem';
+import './App.css';
 
 function App() {
-  const [items, setItems] = useState([]);
-
-  // Загрузка данных при старте
-  useEffect(() => {
-    fetch('http://localhost:8000/items/')
-      .then(res => res.json())
-      .then(data => setItems(data));
-  }, []);
-
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>UniDict Admin</h1>
-      <AddItem onAdd={newItem => setItems([...items, newItem])} />
-      <ItemList items={items} />
+    // <div className="App">
+    //   <header className="App-header">
+    //     <img src={logo} className="App-logo" alt="logo" />
+    //     <p>
+    //       Edit <code>src/App.js</code> and save to reload.
+    //     </p>
+    //     <a
+    //       className="App-link"
+    //       href="https://reactjs.org"
+    //       target="_blank"
+    //       rel="noopener noreferrer"
+    //     >
+    //       Learn React
+    //     </a>
+    //   </header>
+    // </div>
+
+    <div>
+      test
     </div>
+
+
   );
 }
 
