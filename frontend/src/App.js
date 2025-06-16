@@ -1,30 +1,25 @@
-import './App.css';
+import { Admin, Resource } from 'react-admin';
+import { dataProvider } from './dataProvider';
+import { authProvider } from './authProvider';
+import { UserList, UserEdit, UserCreate } from './resources/users';
+import { LoginPage } from './components/LoginPage';
+import { Layout } from './layout';
 
-function App() {
-  return (
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
-
-    <div>
-      test
-    </div>
-
-
-  );
-}
+const App = () => (
+  <Admin
+    dataProvider={dataProvider}
+    authProvider={authProvider}
+    loginPage={LoginPage}
+    layout={Layout}
+    requireAuth
+  >
+    <Resource 
+      name="users" 
+      list={UserList} 
+      edit={UserEdit}
+      create={UserCreate}
+    />
+  </Admin>
+);
 
 export default App;
